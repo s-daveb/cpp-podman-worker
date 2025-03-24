@@ -1,4 +1,9 @@
 #!/bin/sh
 
-podman build -t mybuildbot:$(cat currentversion) .
-podman build -t mybuildbot:latest .
+image_name="$(cat image_name)"
+version="$(cat currentversion)"
+
+extra_opts="${extra_opts}"
+
+podman build ${extra_opts} -t ${image_name}:${version} .
+podman build ${extra_opts} -t ${image_name}:latest .
