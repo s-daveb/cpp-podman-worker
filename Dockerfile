@@ -16,7 +16,7 @@ ENV WORKERPASS="password"
 ENV WORKER_DESCRIPTION=""
 
 RUN yes | pacman -Sy archlinux-keyring
-RUN yes | pacman -S buildbot-worker autoconf automake make gcc git boost boost-libs sdl2 sdl2_image sdl2_gfx which vim pkgconf nlohmann-json libtool cmake ccache dhclient catch2 net-tools
+RUN yes | pacman -S buildbot-worker autoconf automake make gcc git boost boost-libs sdl2 sdl2_image sdl2_gfx sdl2_ttf which vim pkgconf nlohmann-json libtool cmake ccache dhclient catch2 net-tools
 RUN yes | pacman -S qt6-base qt6-tools qt6-5compat
 
 RUN /usr/bin/sed -i 's/SigLevel = Never/#SigLevel = Never/g' /etc/pacman.conf

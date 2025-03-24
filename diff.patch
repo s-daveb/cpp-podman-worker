@@ -1,0 +1,14 @@
+diff --git a/scripts/publish-image.sh b/scripts/publish-image.sh
+index d52a843..ab05a27 100755
+--- a/scripts/publish-image.sh
++++ b/scripts/publish-image.sh
+@@ -2,6 +2,7 @@
+ 
+ image_name="$(cat image_name)"
+ version="$(cat currentversion)"
++docker_registry="${docker_registry:-localhost:5000}"
+ 
+-podman push localhost/${image_name}:${version} localhost:5000/${image_name}:${version}
+-podman push localhost/${image_name}:${version} localhost:5000/${image_name}:latest
++podman push localhost/${image_name}:${version} ${docker_registry}/${image_name}:${version}
++podman push localhost/${image_name}:${version} ${docker_registry}/${image_name}:latest
