@@ -15,7 +15,7 @@ The container is configured as a Buildbot worker node that automates the compila
 
 1. Clone the repository:
 ```bash
-git clone [s-daveb/cpp-podman-worker.git](https://github.com/s-daveb/cpp-podman-worker.git)
+git clone https://github.com/s-daveb/cpp-podman-worker.git
 cd cpp-podman-worker
 ```
 
